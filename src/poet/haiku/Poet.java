@@ -1,10 +1,14 @@
 package poet.haiku;
 
-public class Poet {
+public class Poet
+{
     public static void main(String[] args)
     {
-        System.out.println("This dew drop world");
-        System.out.println("Is a dew drop world and yet");
-        System.out.println("And yet");
+        Line first = new Line(5);
+        Line second = new Line(7);
+        Line third = new Line(5);
+        System.out.println(first.getLine());
+        System.out.println(second.getLine());
+        System.out.println(third.getLine());
     }
 }
