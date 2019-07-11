@@ -1,8 +1,8 @@
-package poet.haiku;
+package poet.line;
 
 import poet.words.*;
 
-class Line
+public class Line
 {
     private int syllables;
     private String text = "";
@@ -14,8 +14,9 @@ class Line
     private Word conjunction;
     private Word currentWord = new Word();
 
-    Line(int syllables)
+    public Line(int syllables)
     {
+        // TODO: Split up word types to be much more granular (ex: adverbs -> conjunctive adverbs, etc.)
         this.syllables = syllables;
         this.noun = new Noun();
         this.verb = new Verb();
@@ -28,6 +29,7 @@ class Line
 
     private void generate()
     {
+        // TODO: Account for multi-syllable words.
         for (int i = 0; i < this.syllables; i++) {
             Word word = getNextWord();
             this.text += word.getWord();
@@ -63,7 +65,7 @@ class Line
         return this.currentWord;
     }
 
-    String getLine()
+    public String getLine()
     {
         return this.text;
     }

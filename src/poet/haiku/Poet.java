@@ -1,5 +1,7 @@
 package poet.haiku;
 
+import poet.line.Line;
+
 public class Poet
 {
     public static void main(String[] args)

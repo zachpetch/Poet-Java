@@ -5,6 +5,10 @@ import java.util.Random;
 
 public class Word
 {
+    /*
+     * TODO List:
+     *
+     */
     private ArrayList<String> words = new ArrayList<>();
     String type = "word";
 
