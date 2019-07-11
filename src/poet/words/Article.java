@@ -1,10 +1,11 @@
-package poet.haiku;
+package poet.words;
 
-class Article extends Word
+public class Article extends Word
 {
-    Article()
+    public Article()
     {
         super();
+        this.type = "article";
         assembleWords();
     }
 
@@ -16,11 +17,6 @@ class Article extends Word
         addWord("your");
         addWord("his");
         addWord("her");
-    }
-
-    String getType()
-    {
-        return "article";
     }
 }
 

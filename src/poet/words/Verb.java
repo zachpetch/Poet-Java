@@ -1,10 +1,11 @@
-package poet.haiku;
+package poet.words;
 
-class Verb extends Word
+public class Verb extends Word
 {
-    Verb()
+    public Verb()
     {
         super();
+        this.type = "verb";
         assembleWords();
     }
 
@@ -16,10 +17,5 @@ class Verb extends Word
         addWord("screamed");
         addWord("flew");
         addWord("kicked");
-    }
-
-    String getType()
-    {
-        return "verb";
     }
 }

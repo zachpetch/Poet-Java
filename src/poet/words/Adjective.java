@@ -1,10 +1,11 @@
-package poet.haiku;
+package poet.words;
 
-class Adjective extends Word
+public class Adjective extends Word
 {
-    Adjective()
+    public Adjective()
     {
         super();
+        this.type = "adjective";
         assembleWords();
     }
 
@@ -16,10 +17,5 @@ class Adjective extends Word
         addWord("warm");
         addWord("fresh");
         addWord("sweet");
-    }
-
-    String getType()
-    {
-        return "adjective";
     }
 }

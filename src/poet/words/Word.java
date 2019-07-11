@@ -1,25 +1,26 @@
-package poet.haiku;
+package poet.words;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-class Word
+public class Word
 {
     private ArrayList<String> words = new ArrayList<>();
+    String type = "word";
 
     void addWord(String text)
     {
         words.add(text);
     }
 
-    String getWord()
+    public String getWord()
     {
         Random r = new Random();
         return words.get(r.nextInt(words.size()));
     }
 
-    String getType()
+    public String getType()
     {
-        return "word";
+        return this.type;
     }
 }

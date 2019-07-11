@@ -1,10 +1,11 @@
-package poet.haiku;
+package poet.words;
 
-class Noun extends Word
+public class Noun extends Word
 {
-    Noun()
+    public Noun()
     {
         super();
+        this.type = "noun";
         assembleWords();
     }
 
@@ -16,10 +17,5 @@ class Noun extends Word
         addWord("dog");
         addWord("egg");
         addWord("flute");
-    }
-
-    String getType()
-    {
-        return "noun";
     }
 }

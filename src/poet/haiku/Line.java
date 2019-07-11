@@ -1,5 +1,7 @@
 package poet.haiku;
 
+import poet.words.*;
+
 class Line
 {
     private int syllables;
@@ -9,6 +11,7 @@ class Line
     private Word adjective;
     private Word adverb;
     private Word article;
+    private Word conjunction;
     private Word currentWord = new Word();
 
     Line(int syllables)
@@ -19,6 +22,7 @@ class Line
         this.adjective = new Adjective();
         this.adverb = new Adverb();
         this.article = new Article();
+        this.conjunction = new Conjunction();
         generate();
     }
 
@@ -46,7 +50,11 @@ class Line
                 this.currentWord = this.verb;
                 break;
             case "verb":
+            case "conjunction":
                 this.currentWord = this.adverb;
+                break;
+            case "adverb":
+                this.currentWord = this.conjunction;
                 break;
             default:
                 this.currentWord = this.article;
